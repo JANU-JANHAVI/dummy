@@ -1,17 +1,10 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, VERSION } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'my-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'my-app';
-
-  constructor(private router: Router) {}
-
-  onButtonClicked(): void {
-    this.router.navigateByUrl('products');
-  }
+  name = 'Angular ' + VERSION.major;
 }
